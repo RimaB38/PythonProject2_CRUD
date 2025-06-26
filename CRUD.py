@@ -28,11 +28,22 @@ while True:
             aktoriai.append(naujas)
             print(f"prideti aktoriu: {vardas} {pavarde} (ID: {id_counter})")
 
-
         case '3':
-            print("redaguoti")
+            print("redaguoti aktoriu")
+            redaguojamas_id = int(input("ID: 2:"))
+            for aktorius in aktoriai:
+                if aktorius["id"] == redaguojamas_id:
+                    print(aktorius)
+                    aktorius["name"] = input(f"naujas vardas ({aktorius['name']}): ")
+                    aktorius["surname"] = input(f"naujas pavarde ({aktorius['surname']}): ")
         case '4':
-            print("trinti")
+
+            print("istrinti aktoriu")
+            id_istrinti= int(input("ID: "))
+            for aktorius in aktoriai:
+                if aktorius ["id"] == id_istrinti:
+                    aktoriai.remove(aktorius)
+                    print(f"ID: {id_istrinti}.")
         case '5':
             print('iseiti is programos')
             break
