@@ -6,8 +6,8 @@ print("Crud")
 aktoriai= [
     {"id":1,"name": "Leonardo", "surname": "Dicaprio"},
     {"id":2, "name": "Meg", "surname": "Ryan"},
-    {"id":3, "name": "Jamie", "surname": "Foxxas"}
-]
+    {"id":3, "name": "Jamie", "surname": "Foxxas"}]
+
 id_counter =3
 while True:
     print("rinkis 1. print, 2. add, 3. edit, 4. delete, 5 exit")
@@ -37,13 +37,13 @@ while True:
                     aktorius["name"] = input(f"naujas vardas ({aktorius['name']}): ")
                     aktorius["surname"] = input(f"naujas pavarde ({aktorius['surname']}): ")
         case '4':
-
             print("istrinti aktoriu")
-            id_istrinti= int(input("ID: "))
+            id_istrinti= int(input("ID:"))
             for aktorius in aktoriai:
                 if aktorius ["id"] == id_istrinti:
                     aktoriai.remove(aktorius)
                     print(f"ID: {id_istrinti}.")
+
         case '5':
             print('iseiti is programos')
             break
